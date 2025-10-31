@@ -15,6 +15,8 @@ public class main {
 
         while (continuePlay) {
             try {
+                System.out.println("Make your choice - options: [rock, paper, scissors]");
+                System.out.print(" : ");
                 String choice = scanner.nextLine().toLowerCase();
 
                 if (choice.equals("quit")) {
