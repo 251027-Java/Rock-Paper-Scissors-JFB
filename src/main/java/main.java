@@ -7,18 +7,23 @@ public class main {
         ScoreTracker computer = new ScoreTracker(0, "Computer");
         ScoreTracker tie = new ScoreTracker(0, "Tie");
         Scanner scanner = new Scanner(System.in);
+
+        Ascii ascii = new Ascii();
+
         Random rand = new Random();
         String[] choices = {"rock", "paper", "scissors"};
-        int[] scores = {0, 0, 0};
 
-        boolean continuePlay = true;
-
-        while (continuePlay) {
+        while (true) {
             try {
+                String machineChoice = choices[rand.nextInt(3)];
+                System.out.println("Make your choice - options: [rock, paper, scissors] or quit");
+                System.out.print("choice: ");
                 String choice = scanner.nextLine().toLowerCase();
+                ascii.playerOneChoice(choice);
+                ascii.space();
+                ascii.computerChoice(machineChoice);
 
                 if (choice.equals("quit")) {
-                    continuePlay = false;
                     break;
                 }
 
@@ -27,7 +32,7 @@ public class main {
                     continue;
                 }
 
-                String machineChoice = choices[rand.nextInt(3)];
+
 
                 String winner = RockPaperScissorsLogic.RPSResult(choice, machineChoice);
                 if (winner == "machine") {
