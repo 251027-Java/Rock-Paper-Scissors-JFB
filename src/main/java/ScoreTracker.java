@@ -11,6 +11,10 @@ public class ScoreTracker {
        return score;
     }
 
+    public void incrementScore() {
+        score++;
+    }
+
     public void setScore(int score) {
         this.score = score;
     }
