@@ -20,7 +20,6 @@ public class main {
                 System.out.print("choice: ");
                 String choice = scanner.nextLine().toLowerCase();
                 ascii.playerOneChoice(choice);
-                ascii.space();
                 ascii.computerChoice(machineChoice);
 
                 if (choice.equals("quit")) {
