@@ -15,6 +15,16 @@ public class main {
 
         while (true) {
             try {
+
+                if (human.getScore() == 3) {
+                    System.out.println("Player wins");
+                    break;
+                }
+                if (computer.getScore() == 3) {
+                    System.out.println("Computer wins");
+                    break;
+                }
+                
                 String machineChoice = choices[rand.nextInt(3)];
                 System.out.println("Make your choice - options: [rock, paper, scissors] or quit");
                 System.out.print("choice: ");
